@@ -1,24 +1,8 @@
 <?php while (have_posts()) : the_post(); ?>
-<?php
-    global $woocommerce;
-    $events = tribe_get_events( array(
-        'posts_per_page' => -1,
-        'start_date' => date( 'Y-m-d H:i:s' ),
-        'meta_key' => '_EventStartDate',
-        'order_by' => 'meta_value',
-        'order' => 'ASC',
-        'meta_query' => array(
-            array(
-                'key'     => '_tribe_linked_post_walk',
-                'value'   => get_the_id()
-            )
-        )
-    ) );
-?>
 <article class="walk">
     <header class="walk__head ps ps--narrow">
         <div class="row column">
-            <p class="walk__presents"><?php the_field('owner') ?> <span>bemutatja</span></p>
+            <p class="walk__presents"><?php the_field('owner') ?> <span>presents</span></p>
             <h1 class="walk__title"><?php the_title(); ?></h1>
             <h2 class="walk__subtitle"><?php the_field('subtitle') ?></h2>
         </div>
@@ -34,63 +18,19 @@
                 <ul class="facts">
                     <li>Séta ára <span class="facts__value"><?php the_field('price') ?></span></li>
                     <li>Időtartam <span class="facts__value"><?php the_field('duration') ?></span></li>
-                    <!--li>Nehézség <span class="facts__value"><?= $diffdef[ get_field('difficulty') ] ?></span></li-->
                 </ul>
             </div>
-            <?php if (!empty($events)) : ?>
             <section class="walk__events">
-                <h3 class="walk__events__title">Jelentkezés a sétára <span>Válassz időpontot és vedd meg sétajegyed online</span></h3>
+                <h3 class="walk__events__title">Jelenleg nincs meghirdetett időpont <span>Ne búsulj, inkább iratkozz fel hírlevelünkre</span></h3>
                 <ul class="dateboxlister">
-                    <?php foreach ($events as $post) :?>
-
-                            <?php setup_postdata( $post ); ?>
-                            <?php
-                                $is_there_any_product_to_sell = false;
-                                $tickets = TribeEventsTickets::get_all_event_tickets(get_the_ID());
-                                foreach ( $tickets as $ticket ) :
-                                    global $product;
-                                    if ( class_exists( 'WC_Product_Simple' ) ) {
-                                        $product = new WC_Product_Simple( $ticket->product );
-                                    } else {
-                                        $product = new WC_Product( $ticket->product );
-                                    }
-                                    $remaining = $ticket->remaining();
-                                    if ( $ticket->date_in_range( current_time( 'timestamp' ) ) && $remaining ) {$is_there_any_product_to_sell = true;}
-                                endforeach;
-                            ?>
-                            <?php if ( $is_there_any_product_to_sell ) : ?>
-                                <li>
-                                    <div class="datebox">
-                                        <?php get_template_part('templates/dateboxtime' ); ?>
-                                        <a href="#" data-open="addtocartModal-<?= get_the_id(); ?>" class="datebox__action"><span>Jelentkezés</span></a>
-                                    </div>
-                                    <?php get_template_part('templates/addtocartmodal'); ?>
-                                </li>
-                            <?php else: ?>
-                                <li>
-                                    <div class="datebox datebox--secondary">
-                                        <?php get_template_part('templates/dateboxtime' ); ?>
-                                        <div class="datebox__smallinfo datebox__smallinfo--accent ">Betelt</div>
-                                    </div>
-                                </li>
-                            <?php endif; ?>
-                    <?php endforeach; ?>
-                </ul>
-                <?php wp_reset_postdata(); ?>
-            </section>
-            <?php else : ?>
-                <section class="walk__events">
-                    <h3 class="walk__events__title">Jelenleg nincs meghirdetett időpont <span>Ne búsulj, inkább iratkozz fel hírlevelünkre</span></h3>
-                    <ul class="dateboxlister">
-                        <li>
+                    <li>
                         <div class="datebox datebox--secondary">
                             <p>Értesülj elsőként nyitott időpontokról!</p>
                             <a data-open="newsletterModal" href="#newsletterModal" class="datebox__action"><span>Feliratkozom</span></a>
                         </div>
-                        </li>
-                    </ul>
-                </section>
-            <?php endif; ?>
+                    </li>
+                </ul>
+            </section>
         </div>
     </div>
     <section class="walk__afterbanner">
@@ -98,10 +38,10 @@
             <div class="columns medium-6 ps ps--narrow">
                 <div class="walk__extras">
                     <h3>Gyülekezés és indulás</h3>
-                    <p><?php the_field('address') ?><span><?php the_field('addrhelp') ?> <a target="_blank" href="http://maps.google.com/maps?q=<?= urlencode(get_field('address')); ?>" class="walk__loc__maplink">Térkép</a></span></p>
+                    <p><?php the_field('address') ?><span><?php the_field('addrhelp') ?> <a target="_blank" href="http://maps.google.com/maps?q=<?= urlencode(get_field('address')); ?>" class="walk__loc__maplink">Map</a></span></p>
                 </div>
                 <div class="walk__extras walk__extras--list">
-                    <p><span><?= strip_tags(get_the_term_list( $post->ID, 'walktags', '', ', ' )); ?> séta</span></p>
+                    <p><span><?= strip_tags(get_the_term_list( $post->ID, 'walktags', '', ', ' )); ?></span></p>
                 </div>
             </div>
             <div class="columns medium-6 ps ps--narrow">
@@ -148,17 +88,15 @@
             <h3 class="sectionheader__title">Megörökített pillanatok…</h3>
             <nav class="sectionheader__nav"><a class="showall" href="">Galéria indítása</a></nav>
         </header>
-
-                <div class="bupapslider">
-                    <div class="owl-carousel owl-slider">
-                        <?php foreach( $image_ids as $image_id ): ?>
-                            <div class="bupapslider__item">
-                                <?= wp_get_attachment_image( $image_id, 'medium_Large', true, array( 'class' => 'bupapslider__img') ); ?>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
+        <div class="bupapslider">
+            <div class="owl-carousel owl-slider">
+                <?php foreach( $image_ids as $image_id ): ?>
+                <div class="bupapslider__item">
+                    <?= wp_get_attachment_image( $image_id, 'medium_Large', true, array( 'class' => 'bupapslider__img') ); ?>
                 </div>
-
+                <?php endforeach; ?>
+            </div>
+        </div>
     </section>
     <?php endif; ?>
     <?php if( have_rows('bottomtestimonials') || have_rows('press') ): ?>
@@ -208,7 +146,7 @@
 <?php endwhile; ?>
 <div class="ps ps--narrow ps--extralight ps--bordered" data-magellan>
     <div class="row column">
-        <h3 class="nicetitle nicetitle--withbutton">Mehetünk? Sétára fel!<span>Vedd meg sétajegyed online</span></h3>
+        <h3 class="nicetitle nicetitle--withbutton">Ready to get Started?<span>Vedd meg sétajegyed online</span></h3>
         <a href="#ticketblock" class="button alert">Válassz időpontot</a>
     </div>
 </div>

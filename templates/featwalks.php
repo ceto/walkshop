@@ -1,8 +1,8 @@
 <?php $featwalks = get_field('featuredwalks', 'option'); ?>
 <section class="ps">
     <header class="sectionheader">
-        <h3 class="sectionheader__title">Ajánljuk figyelmedbe</h3>
-        <nav class="sectionheader__nav"><a class="showall" href="<?php the_field('walklisterpage', 'option'); ?>">Összes séta</a></nav>
+        <h3 class="sectionheader__title">Featured Programs</h3>
+        <nav class="sectionheader__nav"><a class="showall" href="<?php the_field('walklisterpage', 'option'); ?>">Show All</a></nav>
     </header>
     <ul class="promoted__list">
         <?php foreach( $featwalks as $post): ?>

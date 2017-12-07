@@ -11,9 +11,6 @@
                 <p class="hero__lead"><?php the_field('lead') ?></p>
                 <a href="<?php the_field('buttonurl') ?>" class="hero__action hero__action--down"><?php the_field('buttontext') ?></a>
             </div>
-            <aside class="hero__aside">
-                <?php get_template_part('templates/upcoming','events'); ?>
-            </aside>
         </div>
     </div>
 </section>

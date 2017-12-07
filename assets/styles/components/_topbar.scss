@@ -38,10 +38,7 @@
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
-  right: 4.5rem;
-  @include breakpoint(large) {
-    right: 6.5rem;
-  }
+  right: 0;
 }
 .topbar__mobileblock {
   position: absolute;

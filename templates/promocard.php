@@ -10,34 +10,9 @@
         </h3>
         <p class="promocard__text"><a href="<?php the_permalink(); ?>"><?php the_field('subtitle') ?></a></p>
 
-            <?php
-                $privevents = tribe_get_events( array(
-                'posts_per_page' => -1,
-                'meta_key' => '_tribe_linked_post_walk',
-                'meta_value' => get_the_id(),
-                ) );
-            ?>
-
         <p class="promocard__subtext">
-        <?php if (!empty($privevents)) : ?>
-            <svg class="icon promocard__statusicon"><use xlink:href="#icon-calendar-alt"></use></svg>
-            <ul class="promocard__list">
-                <?php foreach ($privevents as $post) :?>
-                    <li>
-                        <?php setup_postdata( $post ); //var_dump($post);?>
-                        <time datetime="<?= tribe_get_start_time( null, DATE_RFC2822 ) ?>">
-                          <?= tribe_get_start_time( null, 'F' ) ?>
-                          <?= tribe_get_start_time( null, 'j.' ) ?>
-                        </time>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-            <?php wp_reset_postdata(); ?>
+            <a href="<?php the_permalink(); ?>" class="walkcard__button"><?= _e('Click for details', 'bupap'); ?></a>
+        </p>
 
-        <?php else : ?>
-            <p class="promocard__subtext">
-                <?= _e('Schedule is coming soon', 'bupap'); ?>
-            </p>
-        <?php endif; ?>
     </div>
 </div>

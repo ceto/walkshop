@@ -8,7 +8,7 @@
 <?php dynamic_sidebar('sidebar-offcanvas'); ?>
 <div class="mobilecontact">
     <p>
-    <strong>Kapcsolatfelvétel</strong><br>
+    <strong>Contact</strong><br>
     Tel.: <a href="tel:+36.70.408.6888">+36.70.408.6888</a><br>
     E-mail: <a href="mailto:info@setamuhely.hu">info@setamuhely.hu</a>
     </p>

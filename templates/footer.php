@@ -1,9 +1,9 @@
 <footer class="sitefooter">
-    <?php if (!is_checkout() && !is_cart() ) :?>
-    <aside class="sitefooter__small ps ps--narrow ps--pricol">
+
+    <aside class="sitefooter__small ps ps--narrow ps--accent">
         <div class="row column">
-            <h3 class="nicetitle nicetitle--withbutton">Sétaműhely hírlevél havonta<span>Menj biztosra! Értesülj elsőként az új sétákról és időpontokról!</span></h3>
-            <a data-open="newsletterModal" href="#newsletterModal" class="button alert">Feliratkozom a hírlevélre</a>
+            <h3 class="nicetitle nicetitle--withbutton">Budapest Walkshop Newsletter<span>Menj biztosra! Értesülj elsőként az új sétákról és időpontokról!</span></h3>
+            <a data-open="newsletterModal" href="#newsletterModal" class="button alert">Subscribe Newsletter</a>
         </div>
     </aside>
     <div class="sitefooter__csipa ps aps--narrow ps--dark">
@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    <?php endif; ?>
+
 
     <aside class="sitefooter__small ps ps--narrow ps--extralight ps--bordered text-center">
         <div class="row">
@@ -38,15 +38,8 @@
                     <li><a href="mailto:info@setamuhely.hu">Levél nekünk</a></li>
                 </ul>
             </nav>
-            <p>&copy; <?= date('Y') ?> Sétaműhely Kft. - Minden jog fenntartva.</p>
-            <p>
-                <a class="fbarionlink" href="https://www.barion.com/hu/tajekoztato-biztonsagos-online-fizetesrol" target="_blank" title="Az online fizetést a Barion Payment Zrt. biztosítja, MNB engedély száma: H-EN-I-1064/2013">
-            <span data-tooltip aria-haspopup="true" class="has-tip top" data-disable-hover="false" tabindex="1" title="A kényelmes és biztonságos online fizetést a Barion Payment Zrt. biztosítja, MNB engedély száma: H-EN-I-1064/2013 Bankkártya adatai áruházunkhoz nem jutnak el.">
-              <img class="fbarion" width="216" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/barion-card-payment-banner.png" alt="Az online fizetést a Barion Payment Zrt. biztosítja, MNB engedély száma: H-EN-I-1064/2013">
-            </span>
-          </a>
-                </p>
-                <p><small>Site made with love by <a href="http://hydrogene.hu">Hydrogene</a></small></p>
+            <p>&copy; <?= date('Y') ?> Sétaműhely Kft. - All Rights Reserved.</p>
+            <p><small>Site made with love by <a href="http://hydrogene.hu">Hydrogene</a></small></p>
 
             </div>
         </div>

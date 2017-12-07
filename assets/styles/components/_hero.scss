@@ -173,7 +173,7 @@
 
         content: '';
 
-        background-color: $alert-color;
+        background-color: $warning-color;
     }
 }
 
@@ -238,7 +238,7 @@
         color: inherit;
     }
     &:hover {
-        color: $alert-color;
+        color: $warning-color;
         &:before {
             //color: $white;
         }
@@ -251,7 +251,7 @@
         content: '\00bb';
         transform: scale(1.333) translateY(-.1em);
 
-        color: $alert-color;
+        color: $warning-color;
     }
 }
 

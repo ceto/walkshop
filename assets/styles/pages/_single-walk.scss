@@ -98,8 +98,8 @@
 
 
 .walk__important {
-  background-color: $dark-gray;
-  color:#fff;
+  background-color: $warning-color;
+  //color:$black;
   padding:1rem 0;
   padding-left: map-get($grid-column-gutter,small)/2;
   @include breakpoint('medium') {

@@ -15,10 +15,6 @@
                 <svg class="icon"><use xlink:href="#icon-menu"></use></svg><br>
                 Menü
             </a>
-            <a class="topbar__button" href="<?= get_post_type_archive_link( 'tribe_events' ); ?>">
-                <svg class="icon"><use xlink:href="#icon-calendar-alt"></use></svg><br>
-                Menetrend
-            </a>
         </div>
     </div>
 </nav>

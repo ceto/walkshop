@@ -1,6 +1,22 @@
 <?php while (have_posts()) : the_post(); ?>
 <?php get_template_part( 'templates/hero'); ?>
-<section class="home__welcome ps ps--extralight ps--bordered">
+
+<?php $featwalks = get_field('featuredwalks', 'option'); ?>
+<section class="home__featured ps ps--narrow ps--extralight">
+    <header class="sectionheader">
+        <h3 class="sectionheader__title">Most popular programs</h3>
+        <nav class="sectionheader__nav"><a class="showall" href="<?php the_field('walklisterpage', 'option'); ?>">Show All</a></nav>
+    </header>
+    <ul class="promoted__list">
+        <?php foreach( $featwalks as $post): ?>
+        <?php setup_postdata($post); ?>
+        <li><?php get_template_part('templates/promocard' ); ?></li>
+        <?php endforeach; ?>
+    </ul>
+</section>
+<?php wp_reset_postdata(); ?>
+
+<section class="home__welcome ps  ps--bordered">
     <div class="row">
         <div class="columns large-8 axlarge-7 bodycopy">
             <h1><?php the_title(); ?></h1>
@@ -17,20 +33,6 @@
         </div>
     </div>
 </section>
-<?php $featwalks = get_field('featuredwalks', 'option'); ?>
-<section class="home__featured ps aps--narrow">
-    <header class="sectionheader">
-        <h3 class="sectionheader__title">Legnépszerűbb séták</h3>
-        <nav class="sectionheader__nav"><a class="showall" href="<?php the_field('walklisterpage', 'option'); ?>">Mutasd mind</a></nav>
-    </header>
-    <ul class="promoted__list">
-        <?php foreach( $featwalks as $post): ?>
-        <?php setup_postdata($post); ?>
-        <li><?php get_template_part('templates/promocard' ); ?></li>
-        <?php endforeach; ?>
-    </ul>
-</section>
-<?php wp_reset_postdata(); ?>
 <section class="home__news ps ps--extralight ps--bordered">
     <div class="row column">
             <?php
@@ -40,7 +42,7 @@
                 );
                 $freshposts = new WP_Query( $fpargs );
             ?>
-            <h3 class="wseries__shorttitle">Műhelyhírek és aktualitások</h3>
+            <h3 class="wseries__shorttitle">From Our Blog</h3>
             <ul class="presslist">
                 <?php while ($freshposts->have_posts()) : $freshposts->the_post(); ?>
                 <li>
@@ -50,7 +52,7 @@
             </ul>
             <?php wp_reset_postdata(); ?>
             <br>
-            <a class="littlemore" href="<?= get_permalink( get_option( 'page_for_posts' ) ); ?>">További cikkek</a>
+            <a class="littlemore" href="<?= get_permalink( get_option( 'page_for_posts' ) ); ?>">Show all posts</a>
     </div>
 </section>
 <?php endwhile; ?>
