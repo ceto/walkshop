@@ -1,0 +1,121 @@
+html {
+    @include breakpoint(xxxlarge) {
+        font-size: 112.5%;
+    }
+}
+
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+.bodycopy {
+    ul {
+        list-style-type: none;
+        //margin-left: 1.5em;
+        //font-size: 2rem;
+    }
+    ul li {
+        padding-bottom: $paragraph-margin-bottom/2;
+
+        text-indent: -$list-side-margin;
+        &:before {
+            display: inline-block;
+
+            width: .4em;
+            height: .4em;
+            margin-right: 1.333em;
+
+            content: '';
+            transform: translateY(-.125em);
+
+            border-radius: .2em;
+            background-color: $alert-color;
+        }
+    }
+    ol {
+        list-style-type: none;
+
+        counter-reset: my-counter;
+        //margin-left: 0;
+    }
+    ol li {
+        //text-indent: -$list-side-margin;
+        padding-bottom: $paragraph-margin-bottom/2;
+
+        counter-increment: my-counter;
+        &:before {
+            font-family: $header-font-family;
+            font-size: .875em;
+            font-weight: $global-weight-bold;
+
+            display: inline-block;
+
+            width: 1.875em;
+            margin-left: -1.875em;
+            //background-color: red;
+
+            content: counter(my-counter) '.';
+
+            color: $alert-color;
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: $paragraph-margin-bottom*1.5;
+
+        color: scale-color($dark-gray, $lightness: 7%);
+    }
+    blockquote {
+        margin-top: $paragraph-margin-bottom*1.5;
+
+        border: 1px solid $light-gray;
+        background-color: $extralight-gray;
+    }
+}
+
+
+svg.icon {
+    width: 1em;
+    height: 1em;
+
+    fill: currentColor;
+}
+
+.littlemore {
+    font-family: $body-font-family;
+    font-size: .75rem;
+    font-weight: $global-weight-bold;
+    line-height: 1;
+
+    display: inline-block;
+
+    letter-spacing: .05em;
+    //font-style: italic;
+    text-transform: uppercase;
+
+    color: inherit;
+
+    &:focus {
+        color: inherit;
+    }
+    &:hover {
+        color: $alert-color;
+        &:before {
+            //color: $white;
+        }
+    }
+    &:before {
+        display: inline-block;
+
+        margin-right: .333em;
+
+        content: '\00bb';
+        transform: scale(1.333) translateY(-.1em);
+
+        color: $alert-color;
+    }
+}

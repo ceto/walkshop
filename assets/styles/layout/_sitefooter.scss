@@ -1,0 +1,71 @@
+.sitefooter {
+  font-size: .875rem;
+}
+.footerlogo {
+  display: block;
+  overflow: hidden;
+  width: 15rem;
+  height: 4.5rem;
+  //background-color: red;
+  white-space: nowrap;
+  text-indent: 200%;
+  background-image: url(../images/sm-whitelogo.svg);
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: auto 100%;
+  margin:0 0 1rem;
+  @include breakpoint(large) {
+    margin-bottom: 0;
+  }
+}
+
+.sitefooter__great {
+
+}
+.sitefooter__small {
+  p {
+    margin-bottom: .666em;
+    line-height: 1.4;
+    &:last-child() {
+      margin-bottom: 0;
+    }
+  }
+  small {
+    font-style: italic;
+    a {
+      font-style: normal;
+    }
+  }
+}
+.ficonblock {
+  //margin-top: 1rem;
+}
+.socialnav {
+  //float:right;
+}
+
+.fbarionlink {
+  //float:left;
+}
+
+.csimpi {
+
+  //max-width: rem-calc(340);
+  .input-group {
+    margin-bottom: .5rem;
+  }
+   [type='email'] {
+    border-color: $dark-gray;
+    border-width: 1px;
+    background-color: #fff;
+   }
+  .button {
+    background-color: $dark-gray;
+    &:hover, &:focus {
+      background-color: $alert-color;
+    }
+  }
+  p {
+    //font-weight: $global-weight-bold;
+  }
+}

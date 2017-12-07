@@ -1,0 +1,72 @@
+.sectionheader {
+    @include grid-column-row();
+    @include clearfix();
+
+    font-size: .875rem;
+
+    padding-top: .75em;
+    padding-bottom: .75em;
+
+
+    //background-color: $light-gray;
+    @include breakpoint(large) {
+        font-size: 1rem;
+    }
+}
+
+.sectionheader__title {
+    font-family: $body-font-family;
+    font-size: 1.125em;
+    font-weight: $global-weight-normal;
+    line-height: 1;
+
+    float: left;
+
+    margin: 0;
+
+    text-transform: uppercase;
+
+    @include breakpoint(large) {
+        font-size: 1.25rem;
+    }
+}
+h1.sectionheader__title {
+    @include breakpoint(large) {
+        font-size: 1.5rem;
+
+        margin-top: -.333rem;
+        margin-bottom: 0;
+    }
+}
+
+
+.sectionheader__nav {
+    font-size: .875em;
+    line-height: 1.75;
+
+    float: right;
+    .showall {
+        font-weight: $global-weight-bold;
+    }
+    .filtertoggler {
+        font-weight: $global-weight-bold;
+
+        text-transform: uppercase;
+
+        color: $secondary-color;
+        &:hover {
+            color: $alert-color;
+        }
+        &:after {
+            display: inline-block;
+
+            margin-left: .333em;
+
+            content: '\00bb';
+            transform: scale(1.333) translateY(-.1em);
+        }
+    }
+    .button {
+        margin: -.5em 0 0;
+    }
+}

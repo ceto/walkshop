@@ -1,0 +1,296 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-08-17 12:43+0000\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the template
+msgid "Multiple Sections with Sticky Nav"
+msgstr ""
+
+#. Name of the template
+msgid "Voucher Page"
+msgstr ""
+
+#. Name of the template
+msgid "Cascaded List of Walks"
+msgstr ""
+
+#. Name of the template
+msgid "Wider Page Template"
+msgstr ""
+
+#. Name of the template
+msgid "About Us Page with Guide list"
+msgstr ""
+
+#. Name of the template
+msgid "Documentation"
+msgstr ""
+
+#: lib/extras.php:31
+msgid "Continued"
+msgstr ""
+
+#: lib/customposts.php:9
+msgctxt "Walk General Name"
+msgid "Walks"
+msgstr ""
+
+#: lib/customposts.php:10
+msgctxt "Walk Singular Name"
+msgid "Walk"
+msgstr ""
+
+#: lib/customposts.php:12 lib/customposts.php:16
+msgid "Walks"
+msgstr ""
+
+#: lib/customposts.php:13 lib/customposts.php:37
+msgid "Walk"
+msgstr ""
+
+#: lib/customposts.php:14
+msgid "Walk Archives"
+msgstr ""
+
+#: lib/customposts.php:15
+msgid "Parent Walk:"
+msgstr ""
+
+#: lib/customposts.php:17
+msgid "Add New Walk"
+msgstr ""
+
+#: lib/customposts.php:18
+msgid "Add Walk"
+msgstr ""
+
+#: lib/customposts.php:19
+msgid "New Walk"
+msgstr ""
+
+#: lib/customposts.php:20
+msgid "Edit Walk"
+msgstr ""
+
+#: lib/customposts.php:21
+msgid "Update Walk"
+msgstr ""
+
+#: lib/customposts.php:22
+msgid "View Walk"
+msgstr ""
+
+#: lib/customposts.php:23
+msgid "Search Walk"
+msgstr ""
+
+#: lib/customposts.php:24 lib/customposts.php:75
+msgid "Not found"
+msgstr ""
+
+#: lib/customposts.php:25 lib/customposts.php:76
+msgid "Not found in Trash"
+msgstr ""
+
+#: lib/customposts.php:26
+msgid "Walk Photo"
+msgstr ""
+
+#: lib/customposts.php:27
+msgid "Set Walk photo"
+msgstr ""
+
+#: lib/customposts.php:28
+msgid "Remove Walk photo"
+msgstr ""
+
+#: lib/customposts.php:29
+msgid "Use as Walk photo"
+msgstr ""
+
+#: lib/customposts.php:30
+msgid "Insert into Walk"
+msgstr ""
+
+#: lib/customposts.php:31
+msgid "Uploaded to this Walk"
+msgstr ""
+
+#: lib/customposts.php:32
+msgid "Walks list"
+msgstr ""
+
+#: lib/customposts.php:33
+msgid "Walks list navigation"
+msgstr ""
+
+#: lib/customposts.php:34
+msgid "Filter Walks list"
+msgstr ""
+
+#: lib/customposts.php:38
+msgid "Walk Description"
+msgstr ""
+
+#: lib/customposts.php:61
+msgctxt "Guide General Name"
+msgid "Guide"
+msgstr ""
+
+#: lib/customposts.php:62
+msgctxt "Guide Singular Name"
+msgid "Guide"
+msgstr ""
+
+#: lib/customposts.php:63 lib/customposts.php:67 lib/customposts.php:88
+msgid "Guides"
+msgstr ""
+
+#: lib/customposts.php:64
+msgid "Guide"
+msgstr ""
+
+#: lib/customposts.php:65
+msgid "Guide Archives"
+msgstr ""
+
+#: lib/customposts.php:66
+msgid "Parent Guide:"
+msgstr ""
+
+#: lib/customposts.php:68
+msgid "Add New Guide"
+msgstr ""
+
+#: lib/customposts.php:69
+msgid "Add New"
+msgstr ""
+
+#: lib/customposts.php:70
+msgid "New Guide"
+msgstr ""
+
+#: lib/customposts.php:71
+msgid "Edit Guide"
+msgstr ""
+
+#: lib/customposts.php:72
+msgid "Update Guide"
+msgstr ""
+
+#: lib/customposts.php:73
+msgid "View Guide"
+msgstr ""
+
+#: lib/customposts.php:74
+msgid "Search Guide"
+msgstr ""
+
+#: lib/customposts.php:77
+msgid "Guide Photo"
+msgstr ""
+
+#: lib/customposts.php:78
+msgid "Set Guide photo"
+msgstr ""
+
+#: lib/customposts.php:79
+msgid "Remove Guide photo"
+msgstr ""
+
+#: lib/customposts.php:80
+msgid "Use as Guide photo"
+msgstr ""
+
+#: lib/customposts.php:81
+msgid "Insert into Guide"
+msgstr ""
+
+#: lib/customposts.php:82
+msgid "Uploaded to this Guide"
+msgstr ""
+
+#: lib/customposts.php:83
+msgid "Guides list"
+msgstr ""
+
+#: lib/customposts.php:84
+msgid "Guides list navigation"
+msgstr ""
+
+#: lib/customposts.php:85
+msgid "Filter Guides list"
+msgstr ""
+
+#: lib/customposts.php:89
+msgid "Guide Description"
+msgstr ""
+
+#: lib/setup.php:30
+msgid "Primary Navigation"
+msgstr ""
+
+#: lib/setup.php:31
+msgid "Secondary Navigation"
+msgstr ""
+
+#: lib/setup.php:59
+msgid "Primary"
+msgstr ""
+
+#: lib/setup.php:68
+msgid "Footer"
+msgstr ""
+
+#: lib/setup.php:77
+msgid "Mobile Off-Canvas"
+msgstr ""
+
+#: templates/promocard.php:39
+msgid "Schedule is coming soon"
+msgstr ""
+
+#: templates/content.php:11
+msgid "Read more"
+msgstr ""
+
+#: woocommerce/cart/cart.php:35
+msgid "Pcs."
+msgstr ""
+
+#: woocommerce/cart/cart.php:142
+msgid "Enter your code"
+msgstr ""
+
+#: woocommerce/cart/cart-empty.php:33
+msgid "Return to schedules"
+msgstr ""
+
+#. Name of the theme
+msgid "Bupap Theme"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Bupap is a Custom WordPress Theme. <a href=\"https://bitbucket."
+"org/cetoszag/bupap\">Private repo is available on BitBucket</a>"
+msgstr ""
+
+#. URI of the theme
+msgid "http://hydrogene.hu/"
+msgstr ""
+
+#. Author of the theme
+msgid "Hydrogene"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://hydrogene.hu/"
+msgstr ""

@@ -1,0 +1,37 @@
+.meta {
+    //font-family: $header-font-family;
+    font-weight: $global-weight-bold;
+
+    font-size: .75em;
+
+    @include breakpoint(medium) {
+        font-size: .875em;
+    }
+    @include breakpoint(xlarge) {
+        font-size: 1em;
+    }
+    a {
+        color: inherit;
+    }
+}
+.meta__by {
+    //font-weight: $global-weight-bold;
+    //font-family: $header-font-family;
+    //font-variant: small-caps;
+
+    display: inline-block;
+
+    margin: 0;
+
+}
+.meta__updated {
+    display: inline-block;
+    //text-transform: capitalize;
+    //font-variant: small-caps;
+    //font-weight: $global-weight-bold;
+
+    margin: 0;
+    &:before {
+        content: ' · ';
+    }
+}

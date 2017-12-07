@@ -1,0 +1,56 @@
+.woocommerce-cart-form {
+  .product-quantity {
+    width: 4.5rem;
+  }
+}
+
+form.woocommerce-checkout {
+    margin-top:2rem;
+}
+
+
+ul.wc_payment_methods {
+    list-style: none;
+    margin:0 0 2.5rem;
+    padding:0;
+}
+
+li.wc_payment_method {
+    display: block;
+    @include clearfix();
+    margin:0 0 .875rem;
+    padding:0 0;
+    > input[name="payment_method"] {
+        float: left;
+        margin: .333rem .875rem 0 0;
+
+        + label {
+            max-width:90%;
+            margin:0;
+        }
+    }
+
+    label {
+        font-size: 1rem;
+        font-weight: $global-weight-bold;
+    }
+    .payment_box {
+        clear:both;
+        @include clearfix();
+        font-size: .875rem;
+        > * {
+            &:last-child() {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+ul#shipping_method {
+    list-style: none;
+    margin:0;
+    padding:0;
+    > li {
+        display: block;
+    }
+}

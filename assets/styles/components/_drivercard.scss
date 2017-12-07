@@ -1,0 +1,55 @@
+.dclist {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+  > li {
+    display: block;
+    margin:0 0 $global-margin 0;
+  }
+}
+.dctable {
+  > .column {
+    margin:0 0 $global-margin*2 0;
+  }
+}
+.drivercard {
+  @include clearfix();
+  //padding:.75rem 0;
+  max-width: 30rem;
+  background-color: $white;
+  border:1px solid $light-gray;
+  &:hover {
+    background-color: #fff;
+
+    .drivercard__photo {
+    }
+  }
+}
+
+.drivercard__photo {
+  display: block;
+  float:left;
+  max-width: 20%;
+  margin-right: .875rem;
+  img {
+    display: block;
+  }
+  &:hover, &:focus {
+  }
+}
+.drivercard__name {
+  font-size: 1rem;
+  margin: 1em 0 .125em;
+  font-family: $body-font-family;
+  a {
+    color:inherit;
+    &:hover,&:focus {
+      color:$primary-color;
+    }
+  }
+}
+.drivercard__titulus {
+  font-size: .875rem;
+  margin:0;
+  font-style: italic;
+}

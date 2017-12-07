@@ -1,0 +1,53 @@
+.dateboxlister {
+    font-size: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    max-width: $global-width;
+    margin: 0 auto;
+    padding: 0 map-get($grid-column-gutter,small)/2;
+
+    list-style: none;
+    list-style: none;
+
+    white-space: nowrap;
+
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    @include breakpoint(medium) {
+        padding: 0 map-get($grid-column-gutter,medium)/2;
+    }
+    @include breakpoint(large) {
+        padding: 0 map-get($grid-column-gutter,large)/4*3;
+    }
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.dateboxlister > li {
+    font-size: 1rem;
+
+    display: inline-flex;
+    flex-direction: column;
+
+    width: rem-calc(130);
+    margin: 0 map-get($grid-column-gutter,small)/2 0 0;
+    padding: 0 0;
+
+    white-space: normal;
+
+    justify-content: center;
+    @include breakpoint(medium) {
+        margin-right: map-get($grid-column-gutter,medium)/2;
+    }
+    @include breakpoint(large) {
+        margin-right: map-get($grid-column-gutter,large)/2;
+    }
+    &:last-child() {
+        margin-right: 0;
+    }
+}

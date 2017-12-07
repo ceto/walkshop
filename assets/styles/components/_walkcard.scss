@@ -1,0 +1,154 @@
+.walkcard {
+  @include clearfix();
+  white-space: normal;
+  position: relative;
+  transition: box-shadow .2s ;
+  &:hover {
+    .walkcard__title, {
+      color:$alert-color;
+    }
+    .walkcard__text {
+      //color:$secondary-color;
+    }
+    // .walkcard__fig {
+    //   filter:none;
+    // }
+    .walkcard__fig:before {
+      opacity: 0;
+    }
+  }
+}
+
+.walkcard__fig {
+  position: relative;
+  background-color: $black;
+  height:0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  &:before {
+    content:'';
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.15) 50%,rgba(0,0,0,.25) 100%);
+    pointer-events: none;
+    transition: opacity .2s;
+  }
+
+}
+.walkcard__img {
+  position: absolute;
+  left:0;top:0;
+  width:100%;
+  height:100%;
+  display: block;
+  img {
+    display: block;
+    object-fit: cover;
+    width:100%;
+    height:100%;
+  }
+}
+
+.walkcard__head {
+  position: relative;
+  padding: 1rem 0 .5rem;
+}
+
+.walkcard__presents {
+  font-weight: $global-weight-bold;
+  margin-bottom: 0;
+  font-size: .875rem;
+  line-height: 1.2;
+  span {
+    font-weight: $global-weight-normal;
+    font-style: italic;
+  }
+}
+
+.walkcard__title {
+  position: relative;
+  font-size: .875rem;
+  margin:0 0 .25em;
+  text-transform: uppercase;
+  font-family: $body-font-family;
+  font-weight: $global-weight-bold;
+  @include breakpoint(large) {
+    font-size: 1rem;
+  }
+  a {
+    color:inherit;
+    &:hover, &:focus {
+    }
+  }
+  .icon {
+    transform: translateY(.0333em);
+    //color:$alert-color;
+  }
+}
+.walkcard__subtitle {
+  font-family: $body-font-family;
+  font-weight: $global-weight-bold;
+  font-size: .875rem;
+  //color:$secondary-color;
+  margin: 0 0;
+  @include breakpoint(large) {
+    font-size: 1rem;
+  }
+}
+.walkcard__body {
+  padding:0 0;
+
+  @include breakpoint(medium) {
+      min-height: 7rem;
+  }
+  p {
+    margin:0;
+    overflow: hidden;
+    font-size: .875rem;
+    @include breakpoint(medium) {
+      max-height: 8em;
+    }
+  }
+}
+
+.walkcard__foot {
+  padding:.5rem 0 1rem 0;
+
+  .button {
+    margin-bottom: 0;
+  }
+}
+.walkcard__smallinfo {
+  margin: .75em 0 0 .5em;
+  font-size: .75rem;
+  p {
+    margin:0 0 .25em;
+    line-height: 1.2;
+  }
+}
+
+.walkcard__button {
+  font-weight: $global-weight-bold;
+  color:inherit;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: .666rem;
+  line-height: 1;
+  pointer-events: auto;
+  &:hover, &:focus {
+    color:$alert-color;
+  }
+  .icon {
+    color:$alert-color;
+  }
+  &:before {
+    display: inline-block;
+    content: '\00bb';
+    color:$alert-color;
+    margin-right:.333em;
+    transform: scale(1.333) translateY(-.1em);
+  }
+}

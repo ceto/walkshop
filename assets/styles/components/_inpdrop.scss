@@ -1,0 +1,50 @@
+.inpdrop {
+    position: relative;
+}
+
+.inpdrop__input {
+    padding-left: 1rem;
+}
+
+.inpdrop__dropdown {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.5rem .5rem .75rem;
+
+    //border: 1px solid $extralight-gray;
+    border-radius:3px;
+    background-color: #fff;
+    box-shadow: 0 0 .5rem 0 rgba(#000,.125);
+    @include breakpoint(medium) {
+        width:153.333%
+    }
+    @include breakpoint(tablet) {
+        width:134.666%
+    }
+    &:before {
+        position: absolute;
+        z-index: -1;
+        top: -.5rem;
+        left: 1rem;
+
+        display: block;
+
+        width: 1rem;
+        height: 1rem;
+
+        content: '';
+        transform: rotate(135deg);
+
+        background-color: inherit;
+        border:inherit;
+        border-top-color:transparent;
+        border-right-color:transparent;
+
+        //box-shadow: inherit
+    }
+}

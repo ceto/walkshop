@@ -1,0 +1,29 @@
+.bupapslider {
+
+}
+
+.bupapslider, .bupapslider .owl-stage {
+  overflow: hidden;
+  height:12rem;
+  @include breakpoint(tablet) {
+    height:20rem;
+  }
+  @include breakpoint(xlarge) {
+    height:60vh;
+    min-height: 25rem;
+  }
+}
+
+.bupapslider__img {
+  height:12rem;
+  width:auto !important;
+  max-width: none;
+  display: block;
+  @include breakpoint(tablet) {
+    height:20rem;
+  }
+  @include breakpoint(xlarge) {
+    height:60vh;
+    min-height: 25rem;
+  }
+}

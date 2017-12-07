@@ -1,0 +1,29 @@
+.hentry {
+    &:not(:last-child) {
+        border-bottom:1px solid $light-gray;
+    }
+}
+.hentry__header {
+    margin:0 0 .5rem;
+    //color:get-color(primary);
+    &:after {
+        display: block;
+        width: 100%;
+        max-width: 1.75rem;
+        height: .25rem;
+        margin-top: .5rem;
+        content: '';
+        background-color: get-color(secondary);
+    }
+}
+
+.hentry__meta {
+    //color: get-color(primary);
+}
+
+.hentry__title {
+    margin:0;
+    a {
+        color:inherit;
+    }
+}

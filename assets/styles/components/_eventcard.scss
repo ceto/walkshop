@@ -1,0 +1,221 @@
+.eventcard {
+  @include clearfix();
+  position: relative;
+  width:100%;
+  //background-color: #fff;
+  margin: 0 0 1.25rem;
+  //border: 1px solid $medium-gray;
+  //box-shadow: 0 0 1.5rem 0 rgba(#000,.0875);
+  transition: background-color .4s, box-shadow .4s;
+  border-top: 1px solid $light-gray;
+  padding-top: 1.25rem;
+  @include breakpoint(medium) {
+    background-color: scale-color($light-gray, $lightness: $callout-background-fade);
+    box-shadow: 0 0 .25rem 0 rgba(#000,.0875);
+    margin: 0 0 1.75rem;
+    border:none;
+    padding: 0;
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0 0 1.5rem 0 rgba(#000,.125);
+    }
+  }
+}
+
+.eventcard__peak {
+  @include clearfix();
+  background-color: scale-color($alert-color, $lightness: -14%);
+  //background-color: $alert-color;
+  float:left;
+  width: 5rem;
+  @include breakpoint(medium) {
+    width: 6rem;
+  }
+  @include breakpoint(large) {
+    width: 19rem;
+  }
+  @include breakpoint(xlarge) {
+    width: 22rem;
+  }
+
+}
+
+.eventcard__date {
+  display: block;
+  float: left;
+  width: 5rem;
+
+  @include breakpoint(medium) {
+    width:6rem;
+    left:0;
+  }
+
+  .datebox {
+      background-color: inherit;
+      @include breakpoint(medium) {
+        min-height: 8.5rem;
+      }
+  }
+}
+
+
+.eventcard__img {
+  display: none;
+  width:17rem;
+  float:right;
+  background-color: $medium-gray;
+
+
+  @include breakpoint(medium) {
+  }
+  @include breakpoint(large) {
+    position: relative;
+    display: block;
+    width: calc(100% - 6rem);
+    height:0;
+    padding-bottom: 45%;
+    img {
+      object-fit: cover;
+      height:100%;
+      width:100%;
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+  .tribe-events-event-image {
+    @include breakpoint(large) {
+      position:absolute;
+      left:0;
+      top:0;
+      width: 100%;
+      height:100%;
+      background-color: $dark-gray;
+    }
+  }
+}
+
+.eventcard__body {
+  padding:0 0 0 .75rem;
+  margin-left: 5rem;
+  @include breakpoint(medium) {
+    padding:.75rem;
+    float:left;
+    width: calc(100% - 17rem);
+    margin-left: 0;
+  }
+  @include breakpoint(large) {
+    width: calc(100% - 30rem);
+    padding:.875rem;
+  }
+  @include breakpoint(xlarge) {
+    width: calc(100% - 33rem);
+    padding:1.25rem 1rem 0;
+  }
+}
+.eventcard__title {
+  font-size: 1.25rem;
+  margin:0 0 .25em;
+  line-height: 1;
+  //color:$primary-color;
+  //text-transform: uppercase;
+  font-family: $body-font-family;
+  font-weight: $global-weight-bold;
+  //opacity: .875;
+  @include breakpoint(medium) {
+    //margin-bottom: 1em;
+  }
+  @include breakpoint(tablet) {
+    font-size: 1.333rem;
+  }
+  @include breakpoint(xlarge) {
+    font-size: 1.5rem;
+  }
+  a {
+    color:inherit;
+    &:hover, &:focus {
+      color:$primary-color;
+      //text-decoration: underline;
+    }
+  }
+  small {
+    text-transform: none;
+    margin-top: .75em;
+    font-family: $body-font-family;
+    //font-weight: $global-weight-normal;
+    //display: block;
+    font-size: .75em;
+    //color:$body-font-color;
+    color:inherit;
+  }
+
+}
+
+.eventcard__description {
+  //display: none;
+  @include breakpoint(medium) {
+    //display: block;
+  }
+
+  p {
+    margin:0;
+    overflow: hidden;
+    font-size: .75rem;
+    @include breakpoint(medium) {
+      font-size:.875rem;
+      max-height: 3em;
+    }
+    @include breakpoint(tablet) {
+      max-height: 4.666em;
+    }
+    @include breakpoint(xlarge) {
+      font-size: .875rem;
+      max-height: 4.666em;
+    }
+  }
+}
+
+.eventcard__tail {
+
+  padding:.75rem 0 0 .75rem;
+  margin-left: 5rem;
+  @include breakpoint(medium) {
+    padding:.75rem;
+    text-align: center;
+    float:left;
+    width: 11rem;
+    margin-left: 0;
+  }
+  @include breakpoint(large) {
+    padding:.875rem;
+  }
+  @include breakpoint(xlarge) {
+    padding:1rem;
+  }
+}
+.eventcard__actions {
+  .button {
+    margin-bottom: 0;
+    font-size: .75rem;
+    @include breakpoint(medium) {
+      font-size: .75rem;
+      min-width: 100%;
+    }
+    @include breakpoint(large) {
+      font-size: .875rem;
+    }
+  }
+}
+.eventcard__smallinfo {
+  margin: .75em 0 0 .5em;
+  font-size: .75rem;
+  p {
+    margin:0 0 .25em;
+    line-height: 1.2;
+  }
+  form {
+    display: none;
+  }
+}

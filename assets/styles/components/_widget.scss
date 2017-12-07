@@ -1,0 +1,18 @@
+.widget--footer {
+    max-width: rem-calc(420);
+    margin: 0 0 $global-margin*1.5;
+}
+.widget__title {
+    font-family: $body-font-family;
+    font-weight: $global-weight-bold;
+    font-size: 1rem;
+
+    margin: 0 0 $global-margin/2 0;
+    .widget--footer & {
+        font-size: 1.25rem;
+        //text-transform: uppercase;
+        font-weight: $global-weight-normal;
+
+        margin: 0 0 $global-margin 0;
+    }
+}

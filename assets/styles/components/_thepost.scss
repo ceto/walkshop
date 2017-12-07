@@ -1,0 +1,21 @@
+.thepost__header {
+    margin:0 0 .5rem;
+    //color:get-color(primary);
+    &:after {
+        display: block;
+        width: 100%;
+        max-width: 1.75rem;
+        height: .25rem;
+        margin-top: .5rem;
+        content: '';
+        background-color: get-color(secondary);
+    }
+}
+
+.thepost__meta {
+    font-size: 1.25rem;
+
+}
+.thepost_featimage {
+    margin-bottom: $paragraph-margin-bottom;
+}

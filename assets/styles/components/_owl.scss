@@ -1,0 +1,312 @@
+//nav
+$nav-color:       $white !default;
+$nav-color-hover:   $white !default;
+$nav-font-size:     .875rem !default;
+$nav-margin:      1px !default;
+$nav-padding:       1rem .5rem !default;
+$nav-background:    $alert-color !default;
+$nav-background-hover:  scale-color($nav-background, $lightness: -15%) !default;
+$nav-disabled-opacity:  0.5 !default;
+
+//dots
+
+$dot-width:       .666rem !default;
+$dot-height:      .666rem !default;
+$dot-margin:      5px 7px !default;
+$dot-background:    $medium-gray !default;
+$dot-background-active: $alert-color !default;
+
+
+
+//default
+.owl-carousel {
+  // Styling Next and Prev buttons
+  .owl-nav {
+    margin-top: 10px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    [class*='owl-'] {
+      color: $nav-color;
+      font-size: $nav-font-size;
+      margin: $nav-margin;
+      padding: $nav-padding;
+      background: $nav-background;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 3px;
+
+      &:hover {
+        background: $nav-background-hover;
+        color:$nav-color-hover;
+        text-decoration: none;
+      }
+    }
+    .disabled {
+      //opacity: $nav-disabled-opacity;
+      cursor: default;
+    }
+  }
+
+  // Styling dots
+  .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+  }
+
+  .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+
+      span {
+        width: $dot-width;
+        height: $dot-height;
+        margin: $dot-margin;
+        background: $dot-background;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity 200ms ease;
+        border-radius: 50%;
+      }
+
+      &.active,
+      &:hover {
+        span {
+          background: $dot-background-active;
+        }
+      }
+    }
+  }
+}
+
+
+
+//bottomtesimonials
+
+.owl-theme-testi {
+  .owl-dots {
+    text-align: right;
+    .owl-dot {
+      span {
+        width:.5rem;
+        height:.5rem;
+        margin:0 0 0 .5rem;
+      }
+    }
+  }
+  .owl-nav.disabled + .owl-dots {
+    margin-top: 0;
+
+  }
+}
+
+
+
+
+.bigpromo__carousel {
+  .owl-stage-outer {
+    overflow:visible;
+  }
+
+  .owl-item {
+      opacity: .2;
+      transition: opacity .4s;
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        background-color: #000;
+        opacity:0;
+        transition: opacity .4s;
+      }
+
+      &.active {
+        opacity: 1;
+        &:after {
+          pointer-events:none;
+          opacity:0;
+        }
+      }
+
+  }
+
+  // Styling Next and Prev buttons
+  .owl-nav {
+    position: absolute;
+    top:15%;
+    right:-2.666rem;
+    text-align: right;
+    -webkit-tap-highlight-color: transparent;
+
+    [class*='owl-'] {
+      color: $nav-color;
+      font-size: $nav-font-size;
+      margin: $nav-margin;
+      padding: $nav-padding;
+      background: $nav-background;
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        background: $nav-background-hover;
+        color:$nav-color-hover;
+        text-decoration: none;
+      }
+    }
+    .disabled {
+      background-color:$dark-gray;
+      cursor: default;
+      &:hover, &:focus {
+        background-color: $dark-gray;
+      }
+    }
+  }
+
+  // Styling dots
+  .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+  }
+
+  .owl-dots {
+    margin-top: 3rem;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+
+      span {
+        width: $dot-width;
+        height: $dot-height;
+        margin: $dot-margin;
+        background: $dot-background;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity 200ms ease;
+        border-radius: 50%;
+      }
+
+      &.active,
+      &:hover {
+        span {
+          background: $dot-background-active;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.wseries__carousel {
+  margin-bottom: 3rem;
+  .owl-stage-outer {
+    overflow:visible;
+  }
+
+  .owl-item {
+    @include breakpoint(large) {
+      opacity: .875;
+      transition: opacity .4s;
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        background-color: #fff;
+        opacity:.75;
+        transition: opacity .4s;
+      }
+
+      &.active {
+        opacity: 1;
+
+        &:after {
+          pointer-events:none;
+          opacity:0;
+        }
+      }
+    }
+  }
+
+  // Styling Next and Prev buttons
+  .owl-nav {
+    position: absolute;
+    top:15%;
+    right:-2.666rem;
+    text-align: right;
+    -webkit-tap-highlight-color: transparent;
+
+    [class*='owl-'] {
+      color: $nav-color;
+      font-size: $nav-font-size;
+      margin: $nav-margin;
+      padding: $nav-padding;
+      background: $nav-background;
+      display: inline-block;
+      cursor: pointer;
+
+      &:hover {
+        background: $nav-background-hover;
+        color:$nav-color-hover;
+        text-decoration: none;
+      }
+    }
+    .disabled {
+      background-color:$dark-gray;
+      cursor: default;
+      &:hover, &:focus {
+        background-color: $dark-gray;
+      }
+    }
+  }
+
+  // Styling dots
+  .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+  }
+
+  .owl-dots {
+    margin-top: 3rem;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+
+      span {
+        width: $dot-width;
+        height: $dot-height;
+        margin: $dot-margin;
+        background: $dot-background;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity 200ms ease;
+        border-radius: 50%;
+      }
+
+      &.active,
+      &:hover {
+        span {
+          background: $dot-background-active;
+        }
+      }
+    }
+  }
+}

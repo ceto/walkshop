@@ -1,0 +1,239 @@
+.walk__head {
+  //padding:4vw 0;
+}
+.walk__presents {
+  font-family: $header-font-family;
+  font-weight: $global-weight-bold;
+  font-size: .875rem;
+  margin:0 0 .75em 0;
+  //text-transform: capitalize;
+  display: inline-block;
+  line-height: 1.2;
+  //color:$primary-color;
+
+  span {
+    font-style: italic;
+    text-transform: lowercase;
+    font-family: $body-font-family;
+    font-weight: $global-weight-normal;
+    font-size: .75em;
+    //color:$alert-color;
+  }
+
+  &:after {
+    content: '';
+    margin-top: .333em;
+    display: block;
+    background-color: $alert-color;
+    width:100%;
+    max-width: 1.75em;
+    height:.25em;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 1.125rem;
+  }
+}
+.walk__title {
+  //font-family: $body-font-family;
+  //font-weight: $global-weight-normal;
+  font-size: 1.5rem;
+  margin:0 0 .125em 0;
+  @include breakpoint(tablet) {
+    font-size:2.5rem;
+  }
+
+}
+
+.walk__subtitle {
+  font-family: $body-font-family;
+  font-weight: $global-weight-normal;
+  font-size: 1.125rem;
+  @include breakpoint(tablet) {
+    font-size: 1.75rem;
+  }
+
+}
+
+.walk__banner {
+  @include clearfix();
+  position: relative;
+  background-color: $warning-color;
+  background-color: $extralight-gray;
+}
+
+.walk__banner__one {
+  @include breakpoint('tablet') {
+    position: absolute;
+    width:50%;
+    height:100%;
+    left:0;
+    top:0;
+
+    border-right: .5rem solid $white;
+  }
+}
+.walk__banner__two {
+  @include breakpoint('tablet') {
+    float:right;
+    width:50%;
+    border-left: .5rem solid $white;
+  }
+}
+
+.walk__herofig {
+  height: inherit;
+  background-color: #000;
+
+}
+
+.walk__herofig img {
+  @include breakpoint('medium') {
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+  }
+}
+
+
+
+.walk__important {
+  background-color: $dark-gray;
+  color:#fff;
+  padding:1rem 0;
+  padding-left: map-get($grid-column-gutter,small)/2;
+  @include breakpoint('medium') {
+    padding-left: map-get($grid-column-gutter,medium)/2;
+  }
+  @include breakpoint('large') {
+    padding: 1.25vw 0;
+    padding-left: map-get($grid-column-gutter,large)/4*3;
+  }
+  // @include breakpoint('xxlarge') {
+  //   padding-left: map-get($grid-column-gutter,xxlarge)/4*3;
+  // }
+}
+
+.walk__events {
+  padding:1.5rem 0;
+    box-shadow: inset 0 0 3px 0 rgba(#000,.075);
+  @include breakpoint('large') {
+    padding: 2.5vw 0;
+  }
+}
+
+.walk__events__title {
+  font-size: 1.25rem;
+  margin:0 0 .875em;
+  padding-left: map-get($grid-column-gutter,small)/2;
+  //font-family: $body-font-family;
+  //color:$alert-color;
+  @include breakpoint('medium') {
+    padding-left: map-get($grid-column-gutter,medium)/2;
+  }
+  @include breakpoint('large') {
+    padding-left: map-get($grid-column-gutter,large)/4*3;
+    font-size: 1.5rem;
+  }
+  // @include breakpoint('xxlarge') {
+  //   padding-left: map-get($grid-column-gutter,xxlarge)/4*3;
+  // }
+
+  span {
+    display: block;
+    font-size: .75em;
+    font-family: $body-font-family;
+    font-weight: $global-weight-normal;
+  }
+}
+
+.walk__afterbanner {
+  border-bottom: 1px solid $light-gray;
+}
+
+.walk__extras {
+  h3 {
+    font-size: 1rem;
+    font-weight: $global-weight-normal;
+    font-family: $body-font-family;
+    //text-transform: uppercase;
+
+    margin:0 0;
+  }
+  p {
+    font-size: 1.25rem;
+    font-weight: $global-weight-bold;
+    margin:0;
+  }
+  span {
+    display: block;
+    font-size: .875rem;
+    font-weight: $global-weight-normal;
+    line-height: $header-lineheight;
+    color:$body-font-color;
+  }
+  & + & {
+    &:before {
+      content: '';
+      margin: $paragraph-margin-bottom 0;
+      display: block;
+      background-color: $alert-color;
+      width:100%;
+      max-width: 2.5em;
+      height:.333em;
+    }
+
+  }
+}
+
+.walk__extras--list {
+  p {
+    //font-size: 1.125rem;
+    text-transform: lowercase;
+    span::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+.walk__loc__maplink {
+  &:after {
+    content: ' \00bb';
+  }
+}
+
+.walk__globalquote {
+  text-align: right;
+  padding: 0;
+  &, & p {
+  }
+  cite {
+    em {
+      margin-left: .5em;
+    }
+  }
+}
+
+.walk__lead {
+  font-size: 1.125rem;
+  font-weight: $global-weight-bold;
+
+  @include breakpoint('tablet') {
+    font-size: 1.333rem;
+  }
+  @include breakpoint('large') {
+    font-size: 1.5rem;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+.walk__quote {
+  text-align: right;
+  padding:0;
+}
+
+.walk__gallery {
+
+}

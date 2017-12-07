@@ -1,0 +1,23 @@
+.page-template-tmpl-voucher {
+
+    .shopitem__fig {
+        margin:0 0 1rem;
+        max-width: $global-width/2;
+
+    }
+    .shopitem__title {
+        margin:0;
+        font-size:1.75rem;
+    }
+    .shopitem__lead {
+        font-weight: $global-weight-bold;
+    }
+    .shopitem__price {
+        font-size: 1.5rem;
+        //font-weight: $global-weight-bold;
+        margin:0 0 1em;
+    }
+    .shopitem__price__label {
+        font-size: .666em;
+    }
+}

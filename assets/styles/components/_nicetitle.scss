@@ -1,0 +1,32 @@
+.nicetitle {
+  font-size: 1.25rem;
+  font-family: $body-font-family;
+  text-transform: uppercase;
+  span {
+    display: block;
+    margin-top: .125em;
+    font-size: .875em;
+    font-family: $body-font-family;
+    text-transform: none;
+    font-weight: $global-weight-normal;
+  }
+  &--withbutton {
+    & + .button {
+      margin:0;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+      float:left;
+      max-width: 66.666%;
+      & + .button {
+        float:right;
+      }
+    }
+
+
+  }
+  @include breakpoint(tablet) {
+    font-size: 1.5rem;
+  }
+}
+

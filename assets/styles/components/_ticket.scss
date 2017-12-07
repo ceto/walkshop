@@ -1,0 +1,132 @@
+.ticketlist {
+    display: table;
+
+    width: 100%;
+    margin: 0 0 0;
+    padding: 0;
+
+    list-style-type: none;
+    font-size: rem-calc(15);
+    @include breakpoint(tablet) {
+        font-size: 1rem;
+    }
+}
+
+.ticket {
+    display: table-row;
+}
+
+.ticket__namewrap {
+    display: table-cell;
+
+    padding: 1.5em 0 1.875em;
+
+    vertical-align: top;
+}
+
+.ticket:not(:last-child) .ticket__namewrap {
+    border-bottom: 1px solid $light-gray;
+}
+
+.ticket__name {
+    font-size: 1em;
+    font-weight: $global-weight-bold;
+    line-height: $header-lineheight;
+
+    display: block;
+
+    margin: 0;
+    padding-top: .5em;
+    color:$body-font-color;
+}
+
+.ticket__description {
+    font-size: .875em;
+    //font-weight: $global-weight-normal;
+    font-style: normal;
+    line-height: $header-lineheight;
+    //color:$primary-color;
+
+    margin-top: .25em;
+    margin-bottom: 0;
+
+}
+
+.ticket__pricequantitywrap {
+    display: table-cell;
+
+    padding: 1.5em 0 1.5em;
+
+    text-align: right;
+    vertical-align: top;
+    min-width: 9em;
+}
+
+.ticket:not(:last-child) .ticket__pricequantitywrap {
+    border-bottom: 1px solid $light-gray;
+}
+
+.ticket__price {
+    line-height: $header-lineheight;
+
+    display: inline-block;
+
+    height: 2.75em;
+    padding-top: .5em;
+    //background-color: red;
+    //color:$alert-color;
+}
+
+.ticket__price__costs {
+    font-weight: $global-weight-bold;
+
+    display: inline-block;
+}
+
+.ticket__price__vat {
+    font-size: .75em;
+
+    display: inline-block;
+}
+
+.ticket__quantity {
+    position: relative;
+
+    display: inline-block;
+    float: right;
+
+    padding-left: 7%;
+
+    [type='number'] {
+        max-width: 3.25em;
+        margin-bottom: 0;
+    }
+
+}
+
+
+.formactions {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    @include clearfix();
+    .button {
+        min-width: 9em;
+        margin-bottom: 0;
+        font-size: .875em;
+    }
+}
+
+.formactions__action {
+    float: right;
+}
+
+.formactions__instruction {
+    float: left;
+    //line-height: 1.2;
+    font-size: .75em;
+    max-width: calc(100% - 12em);
+    margin:0;
+}
+
+
+
