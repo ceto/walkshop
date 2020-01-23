@@ -1,33 +1,25 @@
 {
-  "name": "walkshop",
-  "homepage": "http://hydrogene.hu/",
-  "authors": [
-    "Gabor Szabo <szabogabor@hydrogene.hu>"
-  ],
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "foundation-sites": "~6.3.1",
-    "motion-ui": "^1.2.2",
-    "owl.carousel": "^2.2.1",
-    "isotope": "^3.0.4"
-  },
-  "overrides": {
-    "motion-ui": {
-      "main": [
-        "dist/motion-ui.js",
-        "src/motion-ui.scss"
-      ]
+    "name": "walkshop",
+    "homepage": "http://hydrogene.hu/",
+    "authors": ["Gabor Szabo <szabogabor@hydrogene.hu>"],
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "foundation-sites": "~6.3.1",
+        "motion-ui": "^1.2.2",
+        "owl.carousel": "^2.2.1",
+        "isotope-layout": "isotope#^3.0.6"
     },
-    "isotope": {
-      "main": "dist/isotope.pkgd.js",
-      "dependencies": null
-    },
-    "owl.carousel": {
-      "main": [
-        "dist/owl.carousel.js",
-        "src/scss/owl.carousel.scss"
-      ]
+    "overrides": {
+        "motion-ui": {
+            "main": ["dist/motion-ui.js", "src/motion-ui.scss"]
+        },
+        "isotope-layout": {
+            "main": ["dist/isotope.pkgd.js"],
+            "dependencies": {}
+        },
+        "owl.carousel": {
+            "main": ["dist/owl.carousel.js", "src/scss/owl.carousel.scss"]
+        }
     }
-  }
 }

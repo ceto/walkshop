@@ -5,7 +5,8 @@
 <section class="home__featured ps ps--narrow ps--extralight">
     <header class="sectionheader">
         <h3 class="sectionheader__title">Most popular programs</h3>
-        <nav class="sectionheader__nav"><a class="showall" href="<?php the_field('walklisterpage', 'option'); ?>">Show All</a></nav>
+        <nav class="sectionheader__nav"><a class="showall" href="<?php the_field('walklisterpage', 'option'); ?>">Show
+                All</a></nav>
     </header>
     <ul class="promoted__list">
         <?php foreach( $featwalks as $post): ?>
@@ -21,19 +22,19 @@
         <div class="columns large-8 axlarge-7 bodycopy">
             <h1><?php the_title(); ?></h1>
             <?php if ( has_excerpt() != '' ) :?>
-                <div class="thepage__lead lead"><?php the_excerpt(); ?></div>
+            <div class="thepage__lead lead"><?php the_excerpt(); ?></div>
             <?php endif; ?>
             <div class="wseries__lead">
                 <?php the_content(); ?>
             </div>
         </div>
         <div class="columns large-4">
-        <br>
+            <br>
             <?php get_template_part('templates/promotion'); ?>
         </div>
     </div>
 </section>
-<section class="home__news ps ps--extralight ps--bordered">
+<!-- <section class="home__news ps ps--extralight ps--bordered">
     <div class="row column">
             <?php
                 $fpargs = array(
@@ -54,5 +55,5 @@
             <br>
             <a class="littlemore" href="<?= get_permalink( get_option( 'page_for_posts' ) ); ?>">Show all posts</a>
     </div>
-</section>
+</section> -->
 <?php endwhile; ?>

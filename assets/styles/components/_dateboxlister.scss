@@ -6,7 +6,7 @@
 
     max-width: $global-width;
     margin: 0 auto;
-    padding: 0 map-get($grid-column-gutter,small)/2;
+    padding: 0 map-get($grid-column-gutter, small) / 2;
 
     list-style: none;
     list-style: none;
@@ -16,10 +16,10 @@
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     @include breakpoint(medium) {
-        padding: 0 map-get($grid-column-gutter,medium)/2;
+        padding: 0 map-get($grid-column-gutter, medium) / 2;
     }
     @include breakpoint(large) {
-        padding: 0 map-get($grid-column-gutter,large)/4*3;
+        padding: 0 map-get($grid-column-gutter, large) / 4 * 3;
     }
     &::-webkit-scrollbar-track,
     &::-webkit-scrollbar-thumb,
@@ -34,20 +34,55 @@
     display: inline-flex;
     flex-direction: column;
 
-    width: rem-calc(130);
-    margin: 0 map-get($grid-column-gutter,small)/2 0 0;
+    width: rem-calc(130); //130 orig value
+    margin: 0 map-get($grid-column-gutter, small) / 2 0 0;
     padding: 0 0;
 
     white-space: normal;
 
     justify-content: center;
     @include breakpoint(medium) {
-        margin-right: map-get($grid-column-gutter,medium)/2;
+        margin-right: map-get($grid-column-gutter, medium) / 2;
     }
     @include breakpoint(large) {
-        margin-right: map-get($grid-column-gutter,large)/2;
+        margin-right: map-get($grid-column-gutter, large) / 2;
     }
     &:last-child() {
         margin-right: 0;
+    }
+}
+
+.dateboxscroller {
+    position: absolute;
+    top: 2.75em;
+    right: 0;
+
+    margin-right: map-get($grid-column-gutter, small) / 1.333;
+
+    [data-whatinput="touch"] &,
+    &.lessthanthree {
+        display: none;
+    }
+    @include breakpoint(medium) {
+        margin-right: map-get($grid-column-gutter, medium) / 1.333;
+    }
+    @include breakpoint(large) {
+        margin-right: map-get($grid-column-gutter, large) / 1.333;
+    }
+    > a {
+        display: inline-block;
+        line-height: 1;
+        padding: 0.125em 0.5em;
+        background-color: $medium-gray;
+        border-radius: 3px;
+        font-weight: $global-weight-bold;
+        font-size: 1.125rem;
+        font-family: $header-font-family;
+        color: $dark-gray;
+        &:hover,
+        &:focus {
+            background-color: $primary-color;
+            color: #fff;
+        }
     }
 }

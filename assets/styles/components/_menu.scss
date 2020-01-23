@@ -1,10 +1,37 @@
 .menu--main {
     font-size: .875rem;
     @include breakpoint(large) {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
     .is-dropdown-submenu > li > a {
         display: block;
+    }
+}
+
+.menu--sec {
+    //font-family: $header-font-family;
+    //font-weight: $global-weight-normal;
+    font-size:.875em;
+    margin-right: -.5em;
+
+    text-transform: uppercase;
+    > li {
+        &:not(:last-of-type()) {
+            &:after {
+                content: "•";
+                display: inline-block;
+                margin: 0 .25em;
+                //transform: translateY(.125em);
+            }
+        }
+        > a {
+            display: inline-block;
+            padding:0 .5em;
+            &:hover,
+            &:focus {
+                color: #000;
+            }
+        }
     }
 }
 
@@ -86,6 +113,13 @@
             }
         }
     }
+}
+
+
+.menu--mobile--sec {
+    font-size: 1.125rem;
+    margin-top:3rem;
+    text-transform: none;
 }
 
 .menu--mobile .submenu {
@@ -185,3 +219,4 @@
         }
     }
 }
+

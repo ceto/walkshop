@@ -1,23 +1,60 @@
 .page-template-tmpl-voucher {
 
-    .shopitem__fig {
-        margin:0 0 1rem;
-        max-width: $global-width/2;
 
+}
+
+.shopitem__fig {
+    margin:0 0 1rem;
+    max-width: $global-width/2;
+
+}
+.shopitem__title {
+    margin:0;
+    font-size:1.75rem;
+}
+.shopitem__lead {
+    font-weight: $global-weight-bold;
+}
+.shopitem__price {
+    font-size: 1.5rem;
+    //font-weight: $global-weight-bold;
+    margin:0 0 1em;
+}
+.shopitem__price__label {
+    font-size: .666em;
+}
+
+table.variations {
+    margin:0 0 .25rem 0;
+    td {
+        padding:0;
+        label {
+            font-weight: $global-weight-bold;
+            font-size: 1rem;
+        }
     }
-    .shopitem__title {
-        margin:0;
-        font-size:1.75rem;
+
+    select {
+        width: auto;
+        margin:0 1rem 0 0;
     }
-    .shopitem__lead {
-        font-weight: $global-weight-bold;
+    .reset_variations {
+        display:inline-block;
+        font-size:.875rem;
     }
-    .shopitem__price {
-        font-size: 1.5rem;
-        //font-weight: $global-weight-bold;
-        margin:0 0 1em;
+}
+
+.single_variation_wrap {
+    .stock {
+        font-style: italic;
+        font-size: .875rem;
     }
-    .shopitem__price__label {
-        font-size: .666em;
+    .quantity {
+        margin:1rem 0;
+        label {
+            font-weight: $global-weight-bold;
+            font-size: 1rem;
+
+        }
     }
 }

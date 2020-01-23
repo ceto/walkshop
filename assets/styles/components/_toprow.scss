@@ -1,0 +1,56 @@
+
+
+.toprow {
+    @include clearfix();
+    display: none;
+
+
+    font-size: .75rem;
+    
+	font-weight: $global-weight-bold;
+	line-height: 1;
+
+
+	padding: .666em 1.25rem .5em;
+
+    background-color: $extralight-gray;
+    border-bottom:1px solid $light-gray;
+    @include breakpoint(tablet) {
+		display: block;
+	}
+    
+    a {
+		color: inherit;
+		&:hover,
+		&:focus {
+			color: #000;
+		}
+    }
+    
+
+}
+
+
+.toprow__first {
+    float: left;
+    padding-top:.125em;
+}
+
+.toprow__sec {
+	float: right;
+}
+
+
+.helpdropdown {
+	top: 1.875rem !important;
+	// padding: 3rem 0 2rem;
+	right: 0 !important;
+	left: auto !important;
+	// border-top: none;
+
+	min-width: 270px;
+	// max-width: none;
+
+	text-align: right;
+	// min-height: calc( 100vh - 1rem);
+}

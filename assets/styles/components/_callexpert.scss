@@ -1,0 +1,43 @@
+.callexpert {
+    background-color: scale-color($medium-gray, $lightness: $callout-background-fade);
+    border:1px solid rgba($medium-gray, .5);
+    padding:3rem 2rem;
+    text-align: center;
+    max-width: 22rem;
+    margin:0 auto 2rem;
+    //float:right;
+    @include breakpoint('large') {
+        margin:0 0;
+    }
+
+    .button {
+      //max-width: 13rem;
+      margin:1rem auto 0 auto;
+    }
+}
+.callexpert__title {
+  font-size: 1rem;
+  //text-transform: uppercase;
+  font-weight: $global-weight-bold;
+  //color:$primary-color;
+
+  //max-width: 13rem;
+  margin:0 auto 1em;
+}
+
+.callexpert__fig {
+    margin:0 auto 1rem;
+    max-width: 14rem;;
+}
+
+.callexpert__name {
+    margin:0;
+}
+
+.callexpert__prof {
+    //margin:0;
+}
+
+.callexpert__prof {
+
+}

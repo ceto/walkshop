@@ -90,6 +90,8 @@ $dot-background-active: $alert-color !default;
 .owl-theme-testi {
   .owl-dots {
     text-align: right;
+
+
     .owl-dot {
       span {
         width:.5rem;
@@ -102,6 +104,13 @@ $dot-background-active: $alert-color !default;
     margin-top: 0;
 
   }
+}
+
+.owl-theme-testileft {
+    .owl-dots {
+        text-align: left;
+    }
+
 }
 
 

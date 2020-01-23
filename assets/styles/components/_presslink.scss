@@ -19,35 +19,35 @@
 }
 
 .presslink {
-    padding: .875rem 0 .5rem;
+    padding: .5em 0 .75em;
+    font-size: .75rem;
+    @include breakpoint(large) {
+        font-size: .875rem;
+    }
     //background-color: $medium-gray;
 }
 .presslink__title {
     font-family: $body-font-family;
     font-weight: $global-weight-bold;
     font-family: $header-font-family;
-    font-size: .875rem;
+    font-size: 1em;
 
     margin: 0;
     padding: 0;
     &:before {
         content: counter(press-counter) '. ';
-        // font-weight: $global-weight-bold;
-        // color:$alert-color;
-        // font-family: $header-font-family;
     }
     a {
         color: inherit;
         &:hover,
         &:focus {
-            //color:inherit;
             color: $secondary-color;
-            //text-decoration: underline;
+
         }
     }
 }
 .presslink__src {
-    font-size: .875rem;
+    font-size: 1em;
     //font-weight: $global-weight-bold;
 
     margin: 0 0 0 0rem;

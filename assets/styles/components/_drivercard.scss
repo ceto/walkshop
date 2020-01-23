@@ -41,6 +41,7 @@
   font-size: 1rem;
   margin: 1em 0 .125em;
   font-family: $body-font-family;
+  font-weight: $global-weight-bold;
   a {
     color:inherit;
     &:hover,&:focus {
@@ -49,7 +50,7 @@
   }
 }
 .drivercard__titulus {
-  font-size: .875rem;
+  font-size: .75rem;
   margin:0;
   font-style: italic;
 }

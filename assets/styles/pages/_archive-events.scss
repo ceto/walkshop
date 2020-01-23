@@ -165,3 +165,19 @@
 .searchdetails {
   padding:.5rem 0 0;
 }
+
+
+.post-type-archive-tribe_events {
+    .tribe-events-nav-previous {
+        display: none !important;
+
+    }
+
+    &.paged-2, &.paged-3, .paged-4 {
+
+        .tribe-events-nav-previous {
+            display: inline-block !important;
+
+        }
+    }
+}

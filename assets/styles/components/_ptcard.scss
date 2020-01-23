@@ -1,0 +1,63 @@
+.ptcard {
+    padding:2rem 5% 2rem 5%;
+    border: 1px solid $light-gray;
+    background-color: $white;
+    margin-bottom: 2.5rem;
+    //box-shadow: 0 0 2.5rem 0 rgba(#000,.0875);
+    color:$body-font-color;
+    .button {
+        margin:0;
+    }
+}
+.ptcard__head {
+    //min-height:20rem;
+    @include breakpoint('tablet') {
+        min-height:17rem;
+
+    }
+}
+.ptcard__subtitle {
+    font-family: $header-font-family;
+    font-weight: $global-weight-bold;
+    font-size: .875rem;
+    margin:0 0 .333em 0;
+    //text-transform: capitalize;
+    display: inline-block;
+    line-height: 1.2;
+    //color:$alert-color;
+  
+    span {
+      font-style: italic;
+      text-transform: lowercase;
+      font-family: $body-font-family;
+      font-weight: $global-weight-normal;
+      font-size: .75em;
+      //color:$alert-color;
+    }
+  
+    
+  }
+
+  .ptcard__title {
+    //color:$primary-color;
+
+    &:after {
+        content: '';
+        margin-top: .333em;
+        display: block;
+        background-color: $alert-color;
+        width:100%;
+        max-width: 1.5em;
+        height:.125em;
+    }
+
+    a {
+        color:inherit;
+    }
+    
+  }
+
+  .ptcard__lead {
+      //min-height: 4em;
+      margin-bottom:2rem;
+  }

@@ -54,3 +54,84 @@ ul#shipping_method {
         display: block;
     }
 }
+
+.wc-terms-and-conditions {
+    //margin:0 0 1rem;
+    label {
+        @include clearfix();
+        line-height: 1;
+        input {
+            float:left;
+            margin-bottom: 0;
+        }
+        span {
+            float:left;
+        }
+    }
+}
+
+.woocommerce-NoticeGroup {
+    @include callout-base;
+}
+
+
+
+// SINGLE PRODUCT PAGE
+
+.product__summary {
+    input[type="number"] {
+        max-width: 4em;
+    }
+    
+    .quantity {
+        .screen-reader-text {
+            position: static!important;
+            width: auto;
+            height: auto;
+            overflow: auto;
+            clip: auto;
+
+        }
+    }
+
+}
+
+.product__meta {
+    font-size:.75rem;
+}
+
+
+.productcard {
+    position: relative;
+    padding:.5rem .5rem 2rem;
+    background: #fff;
+    border:1px solid $light-gray;
+    box-shadow: 0 0 1.5rem 0 rgba(#000,.125);
+    margin-bottom:1.5rem;
+    .woocommerce-loop-product__title {
+       color:$body-font-color;
+       margin-top:.5em; 
+    }
+    .shopitem__lead {
+        color:$body-font-color;
+        font-weight: $global-weight-normal;
+    }
+    .price {
+        display: block;
+        font-size: 1.333rem;
+        margin-bottom:1em;
+        font-weight: $global-weight-bold;
+        color:$body-font-color;
+    }
+
+
+}
+
+.projectcard__more {
+    margin:0;
+    position: absolute;
+    bottom:.5rem;
+    left:.5rem;
+    right:.5rem;
+
+}

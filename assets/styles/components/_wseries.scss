@@ -154,6 +154,7 @@
     white-space: normal;
 
     justify-content: center;
+
     @include breakpoint(medium) {
         width: rem-calc(320);
         margin-right: map-get($grid-column-gutter,medium)/2;

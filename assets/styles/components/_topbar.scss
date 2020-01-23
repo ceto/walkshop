@@ -1,101 +1,127 @@
 .topbar {
-  @include grid-column-row();
-  max-width: none;
-  border-bottom: 1px solid $light-gray;
+	@include grid-column-row();
+
+	max-width: none;
+
+    border-bottom: 1px solid $light-gray;
 }
 .topbar__inner {
-  height:3rem;
-  position: relative;
-  z-index: 1;
-  @include breakpoint(large) {
-    height:5rem;
-  }
+	@include breakpoint(large) {
+		height: 4rem;
+	}
+
+	position: relative;
+	z-index: 1;
+
+	height: 3rem;
 }
 .topbar__home {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  left: 0;
+	position: absolute;
+	top: 50%;
+	left: 0;
+
+	transform: translateY(-50%);
 }
 .sitelogo {
-  display: block;
-  overflow: hidden;
-  width: 7rem;
-  height: 2.125rem;
-  //background-color: red;
-  white-space: nowrap;
-  text-indent: 200%;
-  background-image: url(../images/sm-logo.svg);
-  background-repeat: no-repeat;
-  background-position: 0;
-  background-size: auto 100%;
-  @include breakpoint(large) {
-    height:3rem;
-    width: 9.5rem;
-  }
+	@include breakpoint(large) {
+		width: 8.5rem;
+		height: 2.666rem;
+	}
+
+	display: block;
+	overflow: hidden;
+
+	width: 7rem;
+	height: 2.125rem;
+	//background-color: red;
+
+	white-space: nowrap;
+	text-indent: 200%;
+
+	background-image: url(../images/sm-logo.svg);
+	background-repeat: no-repeat;
+	background-position: 0;
+	background-size: auto 100%;
 }
 .topbar__mainnav {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  right: 0;
+	@include breakpoint(large) {
+		right: 6rem;
+	}
+
+	position: absolute;
+	top: 50%;
+	right: 4.5rem;
+
+	transform: translateY(-50%);
 }
 .topbar__mobileblock {
-  position: absolute;
-  transform: translateY(-50%);
-  top: 50%;
-  right: 0;
+	position: absolute;
+	top: 50%;
+	right: 0;
+
+	transform: translateY(-50%);
 }
 
 
 .topbar__actionblock {
-  position: absolute;
-  z-index: -1;
-  // transform: translateY(-50%);
-  // top: 50%;
-  top:0;
-  bottom:-1px;
-  right: -1.25rem;
-
+	position: absolute;
+	z-index: -1;
+	// transform: translateY(-50%);
+	// top: 50%;
+	top: 0;
+	right: -1.25rem;
+	bottom: -1px;
 }
 
 .topbar__button {
-  padding:.25rem 0 0;
-  display: block;
-  float:right;
-  height:100%;
-  width:4.5rem;
-  background-color: get-color(alert);
-  color:$white;
-  text-align: center;
-  font-family: $header-font-family;
-  font-weight: $global-weight-bold;
-  text-transform: uppercase;
-  font-size: .5rem;
-  @include breakpoint(large) {
-    font-size: .666rem;
-    padding:.75rem 0;
-    width:6.5rem;
-  }
-  .icon {
-    font-size: 1.5rem;
+
+	font-family: $header-font-family;
+	font-size: .5rem;
+	font-weight: $global-weight-bold;
+
+	display: block;
+	float: right;
+
+	width: 4.5rem;
+	height: 100%;
+	padding: .25rem 0 0;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	color: $white;
+    background-color: get-color(alert);
+    
     @include breakpoint(large) {
-      font-size: 2.25rem;
+		font-size: .666rem;
+
+		width: 6rem;
+		padding: .666rem 0 0;
+	}
+
+	.icon {
+
+
+		font-size: 1.5rem;
+        @include breakpoint(large) {
+			font-size: 1.75rem;
+		}
     }
-  }
-  &:hover, &:focus {
-    background-color: $anchor-color-hover;
-    color: #fff;
-  }
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: $anchor-color-hover;
+	}
 }
 
 .topbar__button--menutoggler {
-  margin-left: 1px;
-  background-color: get-color(primary);
-  color:$white;
-  width:4.25rem;
-  &:hover, &:focus {
-    background-color: get-color(success);
-  }
+	width: 4.25rem;
+	margin-left: 1px;
 
+	color: $white;
+	background-color: get-color(primary);
+	&:hover,
+	&:focus {
+		background-color: get-color(success);
+	}
 }

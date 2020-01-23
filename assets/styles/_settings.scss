@@ -50,11 +50,12 @@ $global-font-size: 100%;
 $global-width: rem-calc(1300);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #399CCA,
+  primary:  #54a697, //#399CCA,
   secondary: #E87D6F,
   success: #71BF9C,
   warning: #FCD01F,
-  alert: #DD397C,
+  alert: #ee8474, // #DD397C,
+  neutral: #8d8d8d
 );
 $light-gray:  #F4F5F6; $extralight-gray: scale-color($light-gray, $lightness: 50%);
 $medium-gray: #dcdcdc;
