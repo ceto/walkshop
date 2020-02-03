@@ -1,7 +1,7 @@
 <nav class="topbar">
     <div class="topbar__inner">
         <div class="topbar__home">
-            <a href="<?= esc_url(home_url('/')); ?>" class="sitelogo">Sétaműhely</a>
+            <a href="<?= esc_url(home_url('/')); ?>" class="sitelogo">Budapset Walkshop</a>
         </div>
         <div class="topbar__mainnav show-for-tablet">
             <?php
@@ -11,8 +11,11 @@
             ?>
         </div>
         <div class="topbar__actionblock">
-            <a class="topbar__button topbar__button--menutoggler hide-for-tablet" data-toggle="mobilenavcanvas" href="#">
-                <svg class="icon"><use xlink:href="#icon-menu"></use></svg><br>
+            <a class="topbar__button topbar__button--menutoggler hide-for-tablet" data-toggle="mobilenavcanvas"
+                href="#">
+                <svg class="icon">
+                    <use xlink:href="#icon-menu"></use>
+                </svg><br>
                 Menü
             </a>
         </div>

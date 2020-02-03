@@ -18,6 +18,22 @@
   // 4. Include ACF
   include_once( get_stylesheet_directory() . '/lib/acf/acf.php' );
 
+    // 6. Save JSON
+    add_filter('acf/settings/save_json', 'walkshop_acf_json_save_point');
+    function walkshop_acf_json_save_point( $path ) {
+        $path = get_stylesheet_directory() . '/lib/acf/json';
+        return $path;
+    }
+
+
+    // 7. Load JSON
+    add_filter('acf/settings/load_json', 'walkshop_acf_json_load_point');
+    function walkshop_acf_json_load_point( $paths ) {
+        unset($paths[0]);
+        $paths[] = get_stylesheet_directory() . '/lib/acf/json';
+        return $paths;
+    }
+
   function speccolor($spec_id) {
     return '#'.get_field( 'color', 'specialization_'.$spec_id );
   }
@@ -127,7 +143,3 @@ function insite_inspect_scriptsandstyles() {
     echo ' -->'.PHP_EOL;
 }
 //add_action( 'wp_print_scripts', 'insite_inspect_scriptsandstyles' );
-
-
-
-
