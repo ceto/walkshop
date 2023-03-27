@@ -25,8 +25,8 @@
                 <ul class="dateboxlister">
                     <li>
                         <div class="datebox adatebox--secondary">
-                            <p>Reservation is available</p>
-                            <a data-open="newsletterModal" href="mailto:info&setamuhely.hu"
+                            <p>Contact us</p>
+                            <a data-open="newsletterModal" href="mailto:info@walkshop.hu"
                                 class="datebox__action"><span>Send e-mail</span></a>
                         </div>
                     </li>
@@ -116,7 +116,7 @@
 <div class="ps ps--narrow ps--extralight ps--bordered" data-magellan>
     <div class="row column">
         <h3 class="nicetitle nicetitle--withbutton">Ready to get Started?<span>Get in touch by Email</span></h3>
-        <a href="mailto:info@setamuhely.hu" class="button alert">E-mail reservation</a>
+        <a href="mailto:info@walkshop.hu" class="button alert">Send e-mail</a>
     </div>
 </div>
 <?php get_template_part('templates/featwalks' ); ?>

@@ -27,7 +27,7 @@
                                     <use xlink:href="#icon-instagram"></use>
                                 </svg><br />Instagram</a></li>
                         <li><a class="phone" title="Call Phone" href="tel:0036704086888"><svg class="icon">
-                                    <use xlink:href="#icon-flickr"></use>
+                                    <use xlink:href="#icon-call"></use>
                                 </svg><br />70.408.6888</a></li>
                     </ul>
                 </nav>
@@ -41,10 +41,10 @@
             <div class="columns tablet-6 tablet-centered">
                 <nav class="footermininav">
                     <ul class="menu menu--minimenu">
-                        <li><a href="<?= get_permalink(1063); ?>">Kapcsolat</a></li>
-                        <li><a href="<?= get_permalink(978); ?>">ÁSZF</a></li>
-                        <li><a href="<?= get_permalink(1060); ?>">Adatvédelem</a></li>
-                        <li><a href="mailto:info@setamuhely.hu">Levél nekünk</a></li>
+                        <li><a href="<?= get_permalink(1063); ?>">Contact us</a></li>
+                        <li><a href="<?= get_permalink(978); ?>">Terms and Conditions</a></li>
+                        <li><a href="<?= get_permalink(1060); ?>">Data protection</a></li>
+                        <li><a href="mailto:info@walkshop.hu">Mail us</a></li>
                     </ul>
                 </nav>
                 <p>&copy; <?= date('Y') ?> <strong>Budapest Walkshop</strong> by Sétaműhely Kft. - All Rights Reserved.

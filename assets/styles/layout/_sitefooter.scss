@@ -5,15 +5,17 @@
   display: block;
   overflow: hidden;
   width: 15rem;
-  height: 4.5rem;
+  height: 3.875rem;
   //background-color: red;
   white-space: nowrap;
   text-indent: 200%;
-  background-image: url(../images/sm-whitelogo.svg);
+  background-image: url(../images/walkshop-h-small.png);
   background-repeat: no-repeat;
   background-position: 0;
   background-size: auto 100%;
   margin:0 0 1rem;
+  filter: brightness(100);
+  opacity: 0.9;
   @include breakpoint(large) {
     margin-bottom: 0;
   }
