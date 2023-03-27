@@ -1,25 +1,44 @@
 {
-    "name": "walkshop",
-    "homepage": "http://hydrogene.hu/",
-    "authors": ["Gabor Szabo <szabogabor@hydrogene.hu>"],
-    "license": "MIT",
-    "private": true,
-    "dependencies": {
-        "foundation-sites": "~6.3.1",
-        "motion-ui": "^1.2.2",
-        "owl.carousel": "^2.2.1",
-        "isotope-layout": "isotope#^3.0.6"
+  "name": "bupap",
+  "homepage": "http://hydrogene.hu/",
+  "authors": [
+    "Gabor Szabo <szabogabor@hydrogene.hu>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "~6.3.1",
+    "motion-ui": "^1.2.2",
+    "owl.carousel": "^2.2.1",
+    "isotope-layout": "isotope#^3.0.6",
+    "photoswipe": "^4.1.3"
+  },
+  "overrides": {
+    "motion-ui": {
+      "main": [
+        "dist/motion-ui.js",
+        "src/motion-ui.scss"
+      ]
     },
-    "overrides": {
-        "motion-ui": {
-            "main": ["dist/motion-ui.js", "src/motion-ui.scss"]
-        },
-        "isotope-layout": {
-            "main": ["dist/isotope.pkgd.js"],
-            "dependencies": {}
-        },
-        "owl.carousel": {
-            "main": ["dist/owl.carousel.js", "src/scss/owl.carousel.scss"]
-        }
+    "isotope-layout": {
+      "main": [
+        "dist/isotope.pkgd.js"
+      ],
+      "dependencies": {}
+    },
+    "photoswipe": {
+        "main": [
+          "dist/photoswipe.js",
+          "dist/photoswipe-ui-default.js",
+          "src/css/main.scss",
+          "src/css/default-skin/default-skin.scss"
+        ]
+    },
+    "owl.carousel": {
+      "main": [
+        "dist/owl.carousel.js",
+        "src/scss/owl.carousel.scss"
+      ]
     }
+  }
 }

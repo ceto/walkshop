@@ -1,3 +1,23 @@
 .csimped {
   padding:7% 7% 3%;
+  box-shadow: 0 0 3rem 0 rgba(#000,.75);
+}
+
+.csimpedwrap {
+    background-image: url(../images/nlbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.csimpifooter {
+    background-color: rgba(#fff,.875);
+    padding: 0 7%;
+    // text-align: center;
+    // display: inline-block;
+    margin:0 auto;
+    p {
+        margin:0;
+    }
 }

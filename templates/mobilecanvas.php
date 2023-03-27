@@ -10,6 +10,6 @@
     <p>
     <strong>Contact</strong><br>
     Tel.: <a href="tel:+36.70.408.6888">+36.70.408.6888</a><br>
-    E-mail: <a href="mailto:info@setamuhely.hu">info@setamuhely.hu</a>
+    E-mail: <a href="mailto:info@walkshop.hu">info@walkshop.hu</a>
     </p>
 </div>

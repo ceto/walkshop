@@ -15,7 +15,7 @@
 
     <div class="reveal__body">
         <div class="callout" data-closable>
-            <p><small><strong>Zöld színű BUPAP-sétautalványod van?</strong> Ebben az esetben nem kell regisztrálnod. Résztvételi szándékodat jelezd a <a href="mailto:info@setamuhely.hu">info@setamuhely.hu</a> címen! Az utalványt feltétlenül hozd magaddal!</small></p>
+            <p><small><strong>Zöld színű BUPAP-sétautalványod van?</strong> Ebben az esetben nem kell regisztrálnod. Résztvételi szándékodat jelezd a <a href="mailto:info@walkshop.hu">info@walkshop.hu</a> címen! Az utalványt feltétlenül hozd magaddal!</small></p>
             <button class="close-button" aria-label="Dismiss info" type="button" data-close>
                 <span aria-hidden="true">&times;</span>
             </button>

@@ -1,9 +1,12 @@
 @charset 'utf-8';
+@import 'bits';
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/foundation-sites/scss/foundation.scss";
 @import "../../bower_components/motion-ui/src/motion-ui.scss";
 @import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
+@import "../../bower_components/photoswipe/src/css/main.scss";
+@import "../../bower_components/photoswipe/src/css/default-skin/default-skin.scss";
 // endbower
 
 @import 'settings';

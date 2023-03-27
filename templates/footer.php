@@ -4,7 +4,7 @@
         <div class="row column">
             <h3 class="nicetitle nicetitle--withbutton">Budapest Walkshop Newsletter<span>Subscribe to our newsletter
                     and reserve your place at the first row!</span></h3>
-            <a data-open="newsletterModal" href="#newsletterModal" class="button alert">Subscribe Newsletter</a>
+            <a href="https://walkshop.hu/newsletter/" class="button alert">Subscribe Newsletter</a>
         </div>
     </aside>
     <div class="sitefooter__csipa ps aps--narrow ps--dark">
@@ -20,10 +20,10 @@
             <div class="columns large-3">
                 <nav class="socialnav">
                     <ul class="menu menu--socialmenu large-text-right">
-                        <li><a class="face" target="_blank" title="Facebook" href="#"><svg class="icon">
+                        <li><a class="face" target="_blank" title="Facebook" href="https://www.facebook.com/setamuhely.hu/"><svg class="icon">
                                     <use xlink:href="#icon-facebook"></use>
                                 </svg><br />Facebook</a></li>
-                        <li><a class="insta" target="_blank" title="Instagram" href="#"><svg class="icon">
+                        <li><a class="insta" target="_blank" title="Instagram" href="https://www.instagram.com/setamuhely/"><svg class="icon">
                                     <use xlink:href="#icon-instagram"></use>
                                 </svg><br />Instagram</a></li>
                         <li><a class="phone" title="Call Phone" href="tel:0036704086888"><svg class="icon">

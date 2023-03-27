@@ -1,0 +1,123 @@
+$fw-black: 900;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-normal: 400;
+$fw-light: 300;
+
+
+// Colors
+$cl-white: #fefefe;
+$cl-black: #0a0a0a;
+
+$cl-primary: #ad0133;
+$cl-secondary: #5c34a6;
+$cl-gray: #555555;
+$cl-gray-dark: #323232;
+$cl-gray-xdark: #202020;
+$cl-gray-avalanchedark: #251F21;
+$cl-gray-xlight: #f4f2f8;
+$cl-gray-light: #ababab;
+$cl-gray-center: #757575;
+$cl-body-font-color: $cl-black;
+$cl-body-background: $cl-white;
+
+
+
+$layout-gutter-width: 40px;
+// Breakpoints
+$bp-medium: 414px;
+$bp-tablet: 768px;
+$bp-large: 1024px;
+$bp-xlarge: 1280px;
+$bp-xxlarge: 1440px;
+$bp-xxxlarge: 1920px;
+
+
+$pswp__show-hide-transition-duration: 333ms !default;
+$pswp__controls-transition-duration: 333ms !default;
+$pswp__background-color: $cl-gray-xdark !default;
+$pswp__placeholder-color: #222 !default;
+$pswp__box-sizing-border-box: true !default; // disable .pswp * { box-sizing:border-box } (in case you already have it in your site css)
+$pswp__root-z-index: 1500 !default;
+$pswp__assets-path: '../images/pswp-skin/' !default; // path to skin assets folder (preloader, PNG and SVG sprite)
+$pswp__error-text-color: #CCC !default; // "Image not loaded" text color
+$pswp__include-minimal-style: true !default;
+
+.pswp__bg {
+    background: #000000 !important;
+}
+
+
+@mixin niceul {
+    margin-left:0;
+    line-height: 1.4;
+    margin: 1em 0;
+    padding:0;
+    list-style: none;
+
+    &:first-child() {
+        margin-top:0;
+    }
+
+    > li {
+        // text-indent: -1em;
+        padding-left: 1.5em;
+        &:before {
+            // content:'▪';
+            content:'';
+            // transform: skew(20deg) scale(2.5);
+            display: inline-block;
+            // background-color: $cl-gray-light;
+            background-image: svg-load('arrow-right.svg', fill=$cl-primary);
+            background-position: center left;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            font-weight: $fw-bold;
+            display: inline-block;
+            width: .75em;
+            height: 1.4em;
+            float: left;
+            margin-right:.75em;
+            margin-left: -1.5em;
+            color:$cl-primary;
+            // transform: translateY(.125em);
+
+            // transform-origin: left;
+
+        }
+    }
+
+    li:not(:last-child) {
+        margin-bottom: .5em;
+    }
+}
+
+
+@mixin niceol {
+    margin: 1em 0;
+    padding:0;
+    line-height: 1.4;
+    counter-reset: olcounter;
+
+    > li {
+        counter-increment: olcounter;
+        padding-left: 1.5em;
+        &:before {
+            font-weight: $fw-bold;
+            line-height: 1;
+            display: inline-block;
+            width: 1.5em;
+            float: left;
+            margin-left: -1.5em;
+            transform: translateY(.4125em);
+            color:$cl-secondary;
+            content: counter(olcounter) ". ";
+        }
+    }
+
+    li:not(:last-child) {
+        margin-bottom: .5em;
+    }
+
+}

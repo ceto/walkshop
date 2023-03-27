@@ -21,7 +21,7 @@
     // 6. Save JSON
     add_filter('acf/settings/save_json', 'walkshop_acf_json_save_point');
     function walkshop_acf_json_save_point( $path ) {
-        $path = get_stylesheet_directory() . '/lib/acf/json';
+        $path = get_stylesheet_directory() . '/lib/acfjson';
         return $path;
     }
 
@@ -30,7 +30,7 @@
     add_filter('acf/settings/load_json', 'walkshop_acf_json_load_point');
     function walkshop_acf_json_load_point( $paths ) {
         unset($paths[0]);
-        $paths[] = get_stylesheet_directory() . '/lib/acf/json';
+        $paths[] = get_stylesheet_directory() . '/lib/acfjson';
         return $paths;
     }
 
