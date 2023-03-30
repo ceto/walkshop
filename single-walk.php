@@ -26,7 +26,7 @@
                     <li>
                         <div class="datebox adatebox--secondary">
                             <p>Contact us</p>
-                            <a data-open="newsletterModal" href="mailto:info@walkshop.hu"
+                            <a href="mailto:info@walkshop.hu"
                                 class="datebox__action"><span>Send e-mail</span></a>
                         </div>
                     </li>

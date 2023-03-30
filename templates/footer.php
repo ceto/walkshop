@@ -1,12 +1,12 @@
 <footer class="sitefooter">
 
-    <aside class="sitefooter__small ps ps--narrow ps--pricol">
+    <!-- <aside class="sitefooter__small ps ps--narrow ps--pricol">
         <div class="row column">
             <h3 class="nicetitle nicetitle--withbutton">Budapest Walkshop Newsletter<span>Subscribe to our newsletter
                     and reserve your place at the first row!</span></h3>
             <a href="https://walkshop.hu/newsletter/" class="button alert">Subscribe Newsletter</a>
         </div>
-    </aside>
+    </aside> -->
     <div class="sitefooter__csipa ps aps--narrow ps--dark">
         <div class="row">
             <div class="columns large-3">
