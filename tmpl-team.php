@@ -21,5 +21,28 @@
             <div class="columns large-4"><br><?php get_template_part('templates/promotion'); ?></div>
         </div>
     </section>
+    <?php $iter++; ?>
+    <section id="<?= sanitize_title('The Team') ?>" data-magellan-target="<?= sanitize_title('The Team') ?>" class="ps <?= ($iter%2==0)?'ps--extralight':'' ?>">
+        <header class="sectionheader">
+            <h3 class="sectionheader__title">Meat the team</h3>
+        </header>
+        <?php
+            $gargs = array(
+                'post_type' => 'guide',
+                'order'               => 'ASC',
+                'orderby'             => 'menu_order',
+                'posts_per_page'         => -1,
+            );
+            $allguides = new WP_Query( $gargs );
+            ?>
+        <div class="row medium-up-2 large-up-3 dctable">
+            <?php while ($allguides->have_posts()) : $allguides->the_post(); ?>
+                <div class="columns">
+                    <?php get_template_part('templates/drivercard' ); ?>
+                </div>
+            <?php endwhile ?>
+        </div>
+        <?php wp_reset_postdata(); ?>
+    </section>
 </div>
 <?php endwhile; ?>
