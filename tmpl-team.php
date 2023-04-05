@@ -24,7 +24,7 @@
     <?php $iter++; ?>
     <section id="<?= sanitize_title('The Team') ?>" data-magellan-target="<?= sanitize_title('The Team') ?>" class="ps <?= ($iter%2==0)?'ps--extralight':'' ?>">
         <header class="sectionheader">
-            <h3 class="sectionheader__title">Meat the team</h3>
+            <h3 class="sectionheader__title">Meet the team</h3>
         </header>
         <?php
             $gargs = array(
